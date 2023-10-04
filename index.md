@@ -21,7 +21,7 @@ __Genshin Impact__
 2. B
 3. sqrt(-1)
 
-![Image](https://en.wikipedia.org/wiki/Genus_%28mathematics%29#/media/File:Double_torus_illustration.png)
+![Image](https://upload.wikimedia.org/wikipedia/commons/9/9f/Torus_illustration.png)
 
 `print("Hello there")`
 
