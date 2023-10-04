@@ -10,3 +10,7 @@ The working directory was /home when I ran the command. There were no errors in 
 3. File Arg\
 ![Image](images/cd3.png)\
 The working directory was /home/lecture when I ran the command. There was an error in the output as I am trying to change the directory into a file, which is not possible as a file is not a directory.
+
+
+# Second Command: ls
+1. Without Args\
