@@ -1,5 +1,9 @@
 ## CSE 15L Lab Report 1
 
+Author: Chia-Lun Tsao (Gallant)
+Professor Onat Gungor
+Due 9th October 2023
+
 # First Command: cd
 1. Without Args\
 ![Image](images/cd1.png)\
