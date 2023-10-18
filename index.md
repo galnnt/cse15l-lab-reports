@@ -6,6 +6,9 @@ __Genshin Impact__
 __Here are the 5 lab reports:__\
 [Lab Report 1](https://galnnt.github.io/cse15l-lab-reports/lab1.html)\
 [Lab Report 2](https://galnnt.github.io/cse15l-lab-reports/lab2.html)\
+[Lab Report 3](https://www.youtube.com/watch?v=dQw4w9WgXcQ)\
+[Lab Report 4](https://www.youtube.com/watch?v=AlnHNi0hdO0)\
+[Lab Report 5](https://www.youtube.com/watch?v=lCeZrt9hxj0&list=PL5C0uP4MYXh45_SN5fVuyWI3MSZAY9vCE)
 
 # GGWP
 ## DETERMINANT
