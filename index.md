@@ -3,9 +3,9 @@
 _Honkai Star Rail_
 __Genshin Impact__
 
-__Here are the 5 lab reports:__
-[Lab Report 1](https://galnnt.github.io/cse15l-lab-reports/lab1.html)
-[Lab Report 2](https://galnnt.github.io/cse15l-lab-reports/lab2.html)
+__Here are the 5 lab reports:__\
+[Lab Report 1](https://galnnt.github.io/cse15l-lab-reports/lab1.html)\
+[Lab Report 2](https://galnnt.github.io/cse15l-lab-reports/lab2.html)\
 
 # GGWP
 ## DETERMINANT
