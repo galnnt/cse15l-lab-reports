@@ -1,5 +1,9 @@
 # Lab Report 2 🤓
 
+Author: Chia-Lun Tsao (Gallant)\
+Professor Onat Gungor\
+Due 22th October 2023
+
 ## Part 1
 Here is the first add operation:\
 ![Image](images/add1.png)\
