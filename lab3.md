@@ -80,6 +80,8 @@ $grep -A 4 "daf-2 gene" technical/plos/journal.pbio.0020012.txt
 ```
 The `-A num` option for `grep` shows the next `num` lines after (why it's called `A`) each word match in the document (inclusive). This command can be useful because if there were to be a long scientific paper and we want to find some data about a name for the organization (let's say an org is called KAT), this option shows a few lines after each reference of KAT so it's easier to get an idea of how they are involved in the text without having to look through the whole document.
 
+Source: [GeeksForGeeks](https://www.geeksforgeeks.org/grep-command-in-unixlinux/#)
+
 __Option 2: -c__
 ```
 $grep -c "WTC" technical/911report/chapter-9.txt
@@ -90,3 +92,103 @@ $grep -c "Security" technical/government/Gen_Account_Office/ai9868.txt
 94
 ```
 The `-c` option for `grep` shows the word count for the specified pattern within the specified file. This can be used for determining the importance of certain concepts in documents. If a word (except those commonly used such as 'a', 'is', etc.) appears in an article a lot of times, it probably means that the concept/name is important so we need to pay more attention when reading.
+
+Source: [GeeksForGeeks](https://www.geeksforgeeks.org/grep-command-in-unixlinux/#)
+
+__Option 3: -n__
+```
+$grep -n "microscopy" technical/biomed/1471-213X-1-3.txt
+112:        use of light microscopy, EM and a cell death assay (on
+253:          Electron microscopy
+303:          Review of many sections examined by light microscopy
+317:          sensitive than light microscopy and allows more
+451:          microscopy failed to detect cell death in the developing
+582:          Light microscopy
+634:          Electron microscopy
+```
+```
+$grep -n "SARS" technical/plos/pmed.0020239.txt
+6:        When the SARS epidemic showed the first signs of waning, the World Health Organization
+10:        models of disease spread, even though SARS was a newly emerging disease, to help plan their
+13:        as Ebola, SARS, and West Nile virus, and multi-drug-resistant malaria—as well as the
+```
+The `-n` option for `grep` shows the matched lines of the pattern of the document and also their line numbers. This option can be useful when doing some text analysis of the line numbers when quarying for a specific phrase in the document.
+
+Source: [GeeksForGeeks](https://www.geeksforgeeks.org/grep-command-in-unixlinux/#)
+
+__Option 4: -o__
+```
+$grep -o "consequences" technical/government/Alcohol_Problems/Session2-PDF.txt
+consequences
+consequences
+consequences
+consequences
+consequences
+```
+```
+$grep -o "LSC" technical/government/About_LSC/Protocol_Regarding_Access.txt
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+LSC
+```
+The `-o` option of `grep` outputs the matched parts of a matching line (parts that match the specified pattern), but each match is printed on a seperated line. I think this is useful only when you want your terminal to be fairly messy as we can just instead use the option for word count instead of printing the keyword each time it appears.
+
+Source: `man grep` in the terminal
