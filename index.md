@@ -8,7 +8,7 @@ __Here are the 5 lab reports:__\
 [Lab Report 2](https://galnnt.github.io/cse15l-lab-reports/lab2.html)\
 [Lab Report 3](https://galnnt.github.io/cse15l-lab-reports/lab3.html)\
 [Lab Report 4](https://galnnt.github.io/cse15l-lab-reports/lab4.html)\
-[Lab Report 5](https://galnnt.github.io/cse15l-lab-reports/lab5.html)\
+[Lab Report 5](https://galnnt.github.io/cse15l-lab-reports/lab5.html)
 
 # GGWP
 ## DETERMINANT
