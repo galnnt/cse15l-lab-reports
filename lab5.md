@@ -13,14 +13,41 @@ Here is the error message when I ran my tests. I think it happened because one o
 
 2. Reply from the TA
 
-TA: Hmm... Looks like your java program ran out of heap space, meaning you have an infinite loop somewhere. Since we just recently learned
-it, why not just try using the java debugger and see if you could solve the issue for the infinite loop?
+TA: Hmm... Looks like your java program ran out of heap space. Since we just recently learnedit, why not just try using the java debugger and see if you could solve the issue for the infinite loop by looking at the local variables using `suspend` then followed by `locals`?
 
 3. Screenshot of student trying out what the TA said
 
+Student: Hi, I tried running jdb on the ListTests file, and I realized that during the while loop where the program is supposed to 
+increment `index2`, after a few runs in jdb `index2` was never changed. Therefore, I think it's because in the while loop that the program was supposed to increment `index2`, I incremented `index1`, which implied that `index2` is never changed and will always be smaller than `list2.size()`. Thanks for the help :]
+![Image](images/jdb1.png)
+![Image](images/jdb2.png)
+
+The bug is that the student incremented the wrong variable, which led to an infinite loop when the tests were ran. However, this bug 
+can bu subtle sometimes, as if we change the test case to
+```
+public class ListTests {
+  @Test
+  public void weirdTest() {
+    List<String> strl1 = new ArrayList<>();
+    List<String> strl2 = new ArrayList<>();
+    List<String> strl3 = new ArrayList<>();
+    strl1.add("a");
+    strl1.add("b");
+    strl1.add("z");
+    strl3.add("a");
+    strl3.add("b");
+    strl3.add("z");
+    assertEquals(strl3, ListExamples.merge(strl1, strl2));
+  }
+
+}
+```
+Then there will actually be no error reported by JUnit and the test case will pass! This is because in this case `strl2` is empty, 
+meaning that the while loop that is triggering the bug will never run and we will in fact get the correct answer.
+
 4. All information regarding the setup
 
-Here is the file structure for my simulation:
+Here is the file & directory structure for my simulation:
 ```
 - lab3/
   - lib/
@@ -136,6 +163,8 @@ public class ListTests {
 }
 
 ```
+Command line for triggering the bug:
+
 
 ## Part 2 -- Reflection
 In this quarter, I think the lab design from week 7 was very cool for me. Before I took this course, I did not know that we could query 
