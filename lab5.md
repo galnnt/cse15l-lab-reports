@@ -7,13 +7,13 @@ Due 19th November 2023
 ## Part 1 - Debugging Scenario
 1. Post from student
 
-Student: I had this error when I was testing my code for the ListExamples.java file. Can you help with fixing my code?
-Here is the error message when I ran my tests. I think it happened because one of the while loops was running forever?
+Student: I encountered this error when I was testing my code for the ListExamples.java file. Can you help with fixing my code?
+Here is the error message when I ran my tests. I think it happened because one of the while loops was running forever causing the program to crash?
 ![Image](images/fail.png)
 
 2. Reply from the TA
 
-TA: Hmm... Looks like your java program ran out of heap space. Since we just recently learnedit, why not just try using the java debugger and see if you could solve the issue for the infinite loop by looking at the local variables using `suspend` then followed by `locals`?
+TA: Hmm... Looks like your java program ran out of heap space. Since we just recently learned this, why not try using the java debugger and see if you could solve the issue for the infinite loop by looking at the local variables using `suspend` then followed by `locals`?
 
 3. Screenshot of student trying out what the TA said
 
@@ -23,7 +23,7 @@ increment `index2`, after a few runs in jdb `index2` was never changed. Therefor
 ![Image](images/jdb2.png)
 
 The bug is that the student incremented the wrong variable, which led to an infinite loop when the tests were ran. However, this bug 
-can bu subtle sometimes, as if we change the test case to
+can be subtle sometimes, as if we change the test case to
 ```
 public class ListTests {
   @Test
@@ -164,9 +164,22 @@ public class ListTests {
 
 ```
 Command line for triggering the bug:
+![Image](images/trigger.png)
+To fix the bug, we need to change the increment of `index1` to `index2` in line 43. That way, both variables will be incremented correctly when merging the list. The clause should look as 
+follows:
+```
+...
+while(index2 < list2.size()) {
+      result.add(list2.get(index2));
+      index1 += 1;
+    }
+...
+```
+After fixing the bug, we can check that the code works on the tests:
+![Image](images/fixed.png)
 
 
 ## Part 2 -- Reflection
-In this quarter, I think the lab design from week 7 was very cool for me. Before I took this course, I did not know that we could query 
+In this quarter, I think the lab design from week 7 was very cool for me. Before I took this course, I did not know that we could query data in
 files using the command line. Before my thought would be that I would import the file into my jupyter notebook and do operations on them 
 using the pandas library. Now I know another method of processing strings in the future. :)
