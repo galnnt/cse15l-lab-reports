@@ -5,17 +5,17 @@ Professor Onat Gungor\
 Due 19th November 2023
 
 ## Part 1 - Debugging Scenario
-1. Post from student
+### Post from Student
 
 Student: I encountered this error when I was testing my code for the ListExamples.java file. Can you help with fixing my code?
 Here is the error message when I ran my tests. I think it happened because one of the while loops was running forever causing the program to crash?
 ![Image](images/fail.png)
 
-2. Reply from the TA
+### Reply from the TA
 
 TA: Hmm... Looks like your java program ran out of heap space. Since we just recently learned this, why not try using the java debugger and see if you could solve the issue for the infinite loop by looking at the local variables using `suspend` then followed by `locals`?
 
-3. Screenshot of student trying out what the TA said
+### Screenshot of student trying out what the TA said
 
 Student: Hi, I tried running jdb on the ListTests file, and I realized that during the while loop where the program is supposed to 
 increment `index2`, after a few runs in jdb `index2` was never changed. Therefore, I think it's because in the while loop that the program was supposed to increment `index2`, I incremented `index1`, which implied that `index2` is never changed and will always be smaller than `list2.size()`. Thanks for the help :]
@@ -45,7 +45,7 @@ public class ListTests {
 Then there will actually be no error reported by JUnit and the test case will pass! This is because in this case `strl2` is empty, 
 meaning that the while loop that is triggering the bug will never run and we will in fact get the correct answer.
 
-4. All information regarding the setup
+### All information regarding the setup
 
 Here is the file & directory structure for my simulation:
 ```
