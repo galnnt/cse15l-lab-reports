@@ -60,8 +60,9 @@ Here is the file & directory structure for my simulation:
 Contents of __start.sh__ before fixing the bug:
 ```
 set -e
-javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
-java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListTests
+CLASSPATH=".:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar"
+javac -cp $CLASSPATH *.java
+java -cp $CLASSPATH org.junit.runner.JUnitCore ListTests
 ```
 Contents of __ListExamples.java__ before fixing the bug:
 ```
